@@ -1,0 +1,39 @@
+{
+  "UserData": [
+    {
+      "id": "1",
+      "user": "John Doe",
+      "email": "john.doe@example.com",
+      "department": "Engineering",
+      "spendingprofile": "Standard-No Card"
+    },
+    {
+      "id": "2",
+      "user": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "department": "Marketing",
+      "spendingprofile": "Standard-No Card"
+    },
+    {
+      "id": "3",
+      "user": "june smith",
+      "email": "jume@gmail.com",
+      "department": "Member of Sports Analysts",
+      "spendingprofile": "Standard-No Card"
+    },
+    {
+      "id": "4",
+      "user": "jules",
+      "email": "jules@gmail.com",
+      "department": "Member of Sports Analysts",
+      "spendingprofile": "Standard-No Card"
+    },
+    {
+      "id": "5",
+      "user": "xyz",
+      "email": "xyz@gmail.com",
+      "department": "Member of Sports Analysts",
+      "spendingprofile": "Standard-No Card"
+    }
+  ]
+}
