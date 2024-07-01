@@ -261,42 +261,6 @@ const RequestCards = () => {
                         >
                           Approve Card
                         </Button>
-                        <Modal
-                          sx={{ backgroundColor: "transparent", opacity: 0.7 }}
-                          open={open}
-                          aria-labelledby="modal-modal-title"
-                          aria-describedby="modal-modal-description"
-                        >
-                          <Box sx={style}>
-                            <Typography
-                              id="modal-modal-title"
-                              variant="h6"
-                              component="h2"
-                            >
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Nobis ipsum quidem distinctio nisi soluta
-                              illo nulla possimus natus repellat laboriosam!
-                            </Typography>
-                            <Typography
-                              id="modal-modal-description"
-                              sx={{ mt: 2 }}
-                            >
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Eligendi dolorem eum quos doloribus placeat?
-                              Pariatur obcaecati molestiae aperiam unde quas.
-                            </Typography>
-                            <Button
-                              variant="contained"
-                              color="primary"
-                              onClick={handleClose}
-                              sx={{
-                                marginTop: "10px",
-                              }}
-                            >
-                              Approve
-                            </Button>
-                          </Box>
-                        </Modal>
 
                         <Button
                           variant="contained"
@@ -318,6 +282,36 @@ const RequestCards = () => {
             </Grid>
           ))}
         </Grid>
+        <Box>
+          <Modal
+            open={open}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                ipsum quidem distinctio nisi soluta illo nulla possimus natus
+                repellat laboriosam!
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi dolorem eum quos doloribus placeat? Pariatur obcaecati
+                molestiae aperiam unde quas.
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleClose}
+                sx={{
+                  marginTop: "10px",
+                }}
+              >
+                Approve
+              </Button>
+            </Box>
+          </Modal>
+        </Box>
       </Box>
       <Footer />
     </div>
