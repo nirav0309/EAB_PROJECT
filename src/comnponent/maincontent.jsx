@@ -127,7 +127,7 @@ const MainContent = () => {
         >
           New Card Requests
           <Chip
-            label={cardData.length}
+            label={`${cardData.length}`}
             style={{ marginLeft: "20px", backgroundColor: "#00B1B0" }}
           ></Chip>
         </Typography>
@@ -172,14 +172,7 @@ const MainContent = () => {
                       width: "20px",
                     }}
                   >
-                    {searchItems && (
-                      <ClearIcon
-                        style={{
-                          position: "absolute",
-                          left: 15,
-                        }}
-                      />
-                    ) ? (
+                    {searchItems ? (
                       <ClearIcon
                         style={{
                           position: "absolute",
@@ -235,10 +228,18 @@ const MainContent = () => {
                       fontSize: "18px",
                     }}
                   >
-                    <StyledTableCell>User</StyledTableCell>
-                    <StyledTableCell>Email</StyledTableCell>
-                    <StyledTableCell>Department</StyledTableCell>
-                    <StyledTableCell>Spending Profile</StyledTableCell>
+                    <StyledTableCell>
+                      <strong>User</strong>{" "}
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      <strong>Email</strong>{" "}
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      <strong>Department</strong>{" "}
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      <strong>Spending Profile</strong>{" "}
+                    </StyledTableCell>
                   </TableRow>
                 </TableHead>
 

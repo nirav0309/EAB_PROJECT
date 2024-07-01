@@ -1,7 +1,6 @@
 import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Link from "@mui/material/Link";
-import { useLocation } from "react-router-dom";
+// import Link from "@mui/material/Link";
 import { Footer } from "./footer";
 import {
   Box,
@@ -15,8 +14,9 @@ import {
   Select,
   Typography,
 } from "@mui/material";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { Link } from "react-router-dom";
 import { MyAPI1 } from "./myapi";
-
 
 const RequestCards = () => {
   const [cardData, setCardData] = React.useState(null);
@@ -27,21 +27,21 @@ const RequestCards = () => {
     setOpen(false);
   };
 
-  const location = useLocation();
-  const pathnames = location.pathname.split("/").filter((x) => x);
-  const breadcrumbs = pathnames.map((value, index) => {
-    const last = index === pathnames.length - 1;
-    const to = `/${pathnames.slice(0, index + 1).join("/")}`;
-    const label = value.charAt(0).toUpperCase() + value.slice(1);
+  // const location = useLocation();
+  // const pathnames = location.pathname.split("/").filter((x) => x);
+  // const breadcrumbs = pathnames.map((value, index) => {
+  //   const last = index === pathnames.length - 1;
+  //   const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+  //   const label = value.charAt(0).toUpperCase() + value.slice(1);
 
-    return last ? (
-      <span key={to}>{label}</span>
-    ) : (
-      <Link key={to} href={to}>
-        {label}
-      </Link>
-    );
-  });
+  //   return last ? (
+  //     <span key={to}>{label}</span>
+  //   ) : (
+  //     <Link key={to} href={to}>
+  //       {label}
+  //     </Link>
+  //   );
+  // });
 
   const fetchCardData = async () => {
     const response = await MyAPI1.get("/");
@@ -67,12 +67,11 @@ const RequestCards = () => {
     border: "1px solid #000",
     boxShadow: 24,
     p: 4,
-
   };
 
   return (
     <div>
-      <Breadcrumbs
+      {/* <Breadcrumbs
         aria-label="breadcrumb"
         separator="›"
         sx={{ padding: "40px" }}
@@ -89,7 +88,31 @@ const RequestCards = () => {
             ></Chip>
           </span>
         )}
-      </Breadcrumbs>
+      </Breadcrumbs> */}
+      <Box display="flex" alignItems="center" sx={{ padding: "40px" }}>
+        <Breadcrumbs
+          separator={<NavigateNextIcon fontSize="small" />}
+          aria-label="breadcrumb"
+        >
+          <Typography
+            component={Link}
+            to="/"
+            sx={{ textDecoration: "none", color: "black", cursor: "pointer" }}
+          >
+            Credit Card Management
+          </Typography>
+          <Typography
+            href="/card-requests"
+            style={{ color: "#0069BF", textDecoration: "none" }}
+          >
+            Card Requests
+          </Typography>
+        </Breadcrumbs>
+        <Chip
+          label={`${cardData.length}`}
+          style={{ marginLeft: "20px", backgroundColor: "#00B1B0" }}
+        ></Chip>
+      </Box>
 
       <Box sx={{ flexGrow: 1, margin: "35px" }}>
         <Grid container spacing={2}>
