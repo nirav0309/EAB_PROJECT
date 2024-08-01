@@ -10,8 +10,10 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
 import LogoImage from "../assets/Credit_Card.png";
-import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material";
 
 const pages = ["Credit Card Management", "Sending Profile"];
 
@@ -26,12 +28,21 @@ const Header = () => {
     setAnchorElNav(null);
   };
 
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      right: -3,
+      top: 13,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: "0 4px",
+    },
+  }));
+
   return (
     <header style={{ margin: "10px" }}>
       <AppBar
         position="static"
         sx={{
-          borderRadius: "5px",
+          borderRadius: "10px",
           background: "#002746",
           height: "80px",
           padding: "8px",
@@ -42,8 +53,10 @@ const Header = () => {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+              // component="a"
+              // href="#"
+              component={Link}
+              to="/"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -60,8 +73,13 @@ const Header = () => {
                 style={{ height: "50px", width: "50px" }}
               />
             </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+                // justifyContent: "end",
+              }}
+            >
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -106,16 +124,17 @@ const Header = () => {
             </Box>
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              <div>
+              {/* Replace with box */}
+              <Box>
                 <Typography sx={{ pl: "9px" }}>
                   <Typography
                     variant="h6"
                     to="/"
                     component={Link}
                     style={{
-                      fontFamily: "Roboto",
+                      // fontFamily: "Roboto",
                       fontWeight: 700,
-                      fontSize: "20px",
+                      fontSize: "18px",
                       textDecoration: "none",
                       color: "white",
                       cursor: "pointer",
@@ -126,8 +145,8 @@ const Header = () => {
                     Management
                   </Typography>
                 </Typography>
-              </div>
-              <div
+              </Box>
+              <Box
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -140,19 +159,19 @@ const Header = () => {
                     to="/"
                     component={Link}
                     style={{
-                      fontFamily: "Poppins",
+                      // fontFamily: "Poppins",
                       fontWeight: 700,
                       fontSize: "16px",
                       textDecoration: "underline",
                       color: "#00B1B0",
-                      cursor: "Default",
+                      cursor: "pointer",
                     }}
                   >
                     Credit Card Management
                   </Typography>
                 </Typography>
-              </div>
-              <div
+              </Box>
+              <Box
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -164,7 +183,7 @@ const Header = () => {
                     to="/"
                     component={Link}
                     style={{
-                      fontFamily: "Poppins",
+                      // fontFamily: "Poppins",
                       fontWeight: 700,
                       fontSize: "16px",
                       textDecoration: "none",
@@ -175,26 +194,41 @@ const Header = () => {
                     Spending Profile
                   </Typography>
                 </Typography>
-              </div>
+              </Box>
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
-              <div
-                style={{
+            <Box >
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignContent: "center",
                 }}
               >
+                <IconButton
+                  aria-label="cart"
+                  component={Link}
+                  to="/addtocart"
+                  sx={{
+                    color: "white",
+                    marginRight: "10px",
+                    fontSize: "100px",
+                  }}
+                >
+                  <StyledBadge badgeContent={0} color="error">
+                    <NotificationsIcon />
+                  </StyledBadge>
+                </IconButton>
+
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                 <Typography sx={{ p: 1 }}>User Name</Typography>
-              </div>
+              </Box>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-      <Outlet />
     </header>
   );
 };
 export { Header };
+

@@ -2,7 +2,7 @@ import { BottomNavigation, Box, Paper, Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <div>
+    <>
       <Box sx={{ mt: 8 }}>
         <Paper
           sx={{
@@ -17,11 +17,11 @@ const Footer = () => {
               variant="body2"
               color="black"
               sx={{
-                fontFamily: "Poppins",
+                // fontFamily: "Poppins",
                 fontWeight: 500,
-                fontSize: "18px",
+                fontSize: "16px",
                 textAlign: "center",
-                alignContent: "center"
+                alignContent: "center",
               }}
             >
               © Copyright 2024, Credit Card Management
@@ -29,7 +29,7 @@ const Footer = () => {
           </BottomNavigation>
         </Paper>
       </Box>
-    </div>
+    </>
   );
 };
 

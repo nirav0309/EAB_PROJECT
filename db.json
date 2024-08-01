@@ -4,27 +4,27 @@
       "id": "1",
       "user": "John Doe",
       "email": "john.doe@example.com",
-      "department": "Engineering",
+      "department": "QA",
       "spendingprofile": "Standard-No Card"
     },
     {
       "id": "2",
-      "user": "Jane Smith",
-      "email": "jane.smith@example.com",
-      "department": "Marketing",
+      "user": "ava chen",
+      "email": "ava@example.com",
+      "department": "Photographer",
       "spendingprofile": "Standard-No Card"
     },
     {
       "id": "3",
-      "user": "june smith",
-      "email": "jume@gmail.com",
-      "department": "Member of Sports Analysts",
+      "user": "alex volkov",
+      "email": "alex@gmail.com",
+      "department": "Businessman",
       "spendingprofile": "Standard-No Card"
     },
     {
       "id": "4",
-      "user": "jules",
-      "email": "jules@gmail.com",
+      "user": "bridget",
+      "email": "bridget@gmail.com",
       "department": "Member of Sports Analysts",
       "spendingprofile": "Standard-No Card"
     },
@@ -34,6 +34,59 @@
       "email": "xyz@gmail.com",
       "department": "Member of Sports Analysts",
       "spendingprofile": "Standard-No Card"
+    },
+    {
+      "id": "6",
+      "user": "kajal",
+      "email": "kajal@gmail.com",
+      "department": "Member of Sports Analysts",
+      "spendingprofile": "Standard-No Card"
+    }
+  ],
+  "CardData": [
+    {
+      "id": "1",
+      "name": "Jacelyn Granados 1",
+      "department": "80000028 Benefits - Education",
+      "jobTitle": "Lead Specialist, Benefits",
+      "email": "JGrandsod@e.com",
+      "hireDate": "07/09/2018",
+      "currentLevel": "Member3",
+      "traveler": "Not A Traveler",
+      "reason": "To purchase prizes related to our HealthyLife benefits program on a monthly basis"
+    },
+    {
+      "id": "2",
+      "name": "Jacelyn Granados 2",
+      "department": "80000028 Benefits - Education",
+      "jobTitle": "Lead Specialist, Benefits",
+      "email": "JGrandsod@e.com",
+      "hireDate": "07/09/2018",
+      "currentLevel": "Go Member",
+      "traveler": "Not A Traveler",
+      "reason": "To purchase prizes related to our HealthyLife benefits program on a monthly basis"
+    },
+    {
+      "id": "3",
+      "name": "Jacelyn Granados 3",
+      "department": "80000028 Benefits - Education",
+      "jobTitle": "Lead Specialist, Benefits",
+      "email": "JGrandsod@e.com",
+      "hireDate": "07/09/2018",
+      "currentLevel": "Member1",
+      "traveler": "Not A Traveler",
+      "reason": "To purchase prizes related to our HealthyLife benefits program on a monthly basis"
+    },
+    {
+      "id": "4",
+      "name": "Jacelyn Granados 4",
+      "department": "80000028 Benefits - Education",
+      "jobTitle": "Lead Specialist, Benefits",
+      "email": "JGrandsod@e.com",
+      "hireDate": "07/09/2018",
+      "currentLevel": "Member2",
+      "traveler": "Not A Traveler",
+      "reason": "To purchase prizes related to our HealthyLife benefits program on a monthly basis"
     }
   ]
 }

@@ -7,20 +7,25 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
+    "@reduxjs/toolkit": "^2.2.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^8.2.2",
     "json-server": "^1.0.0-beta.1",
     "react": "^18.3.1",
     "react-axios": "^2.0.6",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
     "react-router": "^6.24.0",
     "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
+    "redux-saga": "^1.3.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"json-server --watch db.json --port 3034\" \"npm run start-app\"",
+    "start-app": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5"
   }
 }
